@@ -179,7 +179,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/crowns.jpg);
+    background-image: url(../img/crowns_head.jpg);
     /*background-image: url(../img/amyKids.jpg);*/
     /*background-image: url(../img/kids.jpg);*/
 
@@ -518,4 +518,8 @@ progress {
   -webkit-transition: width .6s ease;
        -o-transition: width .6s ease;
           transition: width .6s ease;
+}
+
+button {
+    margin-top: 20px;
 }
