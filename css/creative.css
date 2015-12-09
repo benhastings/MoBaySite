@@ -11,7 +11,9 @@ body {
 }
 
 body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    /*font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;*/
+    font-family: 'Helvetica Neue',Arial,sans-serif;
+
 }
 
 hr {
@@ -457,10 +459,12 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-sm {
     padding: 5px 10px;
+    margin: 12px 2px;
 }
 
 .btn-xs {
-    padding: 1px 5px;
+    padding: 2px 5px;
+    margin: 15px 2px;
 }
 
 
