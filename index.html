@@ -57,13 +57,12 @@
 
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                      <!-- <a class="page-scroll" href="<GIVING LINK>">Give</a> -->
                       <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
 <input type="hidden" name="hosted_button_id" value="G75JGVBN76VEE">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+<input type="submit" class="btn btn-primary btn-sm page-scroll" name="submit" value="Donate" alt="PayPal - The safer, easier way to pay online!">
 </form>
+
                     </li>
                     <li>
                         <a class="page-scroll" href="#overview">Overview</a>
@@ -84,24 +83,40 @@
         <!-- /.container-fluid -->
     </nav>
 
-    <!-- End Navigation -->
+    <!-- 
+        End Navigation 
+        ------------------------------------------------>
 
     <header>
         <div class="header-content"> 
             
 
             <div class="header-content-inner">
-                <div class="progress center-block" style="width: 75%;">
-                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="1200" aria-valuemin="0" aria-valuemax="70000" style="min-width: 3em;width: 2%;">
+                <div class="progress center-block" style="width: 50%;">
+                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="1200" aria-valuemin="0" aria-valuemax="100000" style="min-width: 3em;width: 2%;">
                     $1.2k
                   </div>
+                </div>
+
+                <div class="center-block">
+                <h3>$1,200 of $100,000 raised</h3>
                 </div>
 
 
                 <h1>Sanctuary for the Saints</h1>
                 <hr>
-                <p>Help the church in Montego Bay to have a safe place for worship and fellowship!</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Support This Work!</a>
+                <h4>Helping the church in Montego Bay to have a safe place for worship and fellowship!</h4>
+
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="hosted_button_id" value="G75JGVBN76VEE">
+                <input type="submit" class="btn btn-primary btn-xl page-scroll" name="submit" value="Support This Work!" alt="PayPal - The safer, easier way to pay online!">
+                </form>
+
+                <audio controls style="width:160px">
+                    <source src="welcome_audio.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
             </div>
         </div>
     </header>
@@ -110,14 +125,16 @@
     Overview Points
     ------------------------------>
 
-    <section class="bg-primary" id="overview">
+    <section id="overview">
         <div class="scroll-to container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Overview of This Work</h2>
-                    <hr class="light">
-                    <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-                    <p><a href="#" class="btn btn-default btn-xl">Get Started!</a></p>
+                    <hr class="primary">
+                    <p class="text-muted">A labor of love, the idea began after Amy's most recent visit to Jamaica.  The christians in Montego Bay have been assembling in a rented garage for more than 20 years.  A number of dedicated christians who have visited and worked with the christians in Montego Bay are co-ordinating this work to construct a building where the brethren can meet with some level of peace and safety.</p>
+                    <p class="text-muted">The plannning is complete and work can begin as soon as the funds are raised.</p>
+                    <p>Click the Donate button below or read on to learn more</p>
+                    <p><a href="#" class="btn btn-primary btn-xl">Donate</a></p>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/BVBxHtxhe8U" frameborder="0" allowfullscreen></iframe>
                 </div>
 
@@ -149,10 +166,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    Meeting Outdoors
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    The Rented space has only one room, so, to separate classes, meeting outdoors is necessary.  So, weather dictates 
                                 </div>
                             </div>
                         </div>
@@ -179,10 +196,10 @@
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Category
+                                    Brethren
                                 </div>
                                 <div class="project-name">
-                                    Project Name
+                                    Maxwell is in his 23rd year of working with the brethren who still meet in the same rented YMCA garage.
                                 </div>
                             </div>
                         </div>
@@ -205,7 +222,7 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/6.jpg" class="img-responsive" alt="">
+                        <img src="img/brethren_sm.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
@@ -225,12 +242,12 @@
 <!-- 
     Updates from Wordpress
     ------------------------------>
-    <section id="updates">
+    <section class="bg-primary" id="updates">
     <div class="scroll-to container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Recent Updates</h2>
-                    <hr class="primary">
+                    <hr class="light">
                 </div>
             </div>
         </div>
@@ -256,36 +273,44 @@
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-user text-primary"></i>
-                        <h3>Who?</h3>
-                        <p class="text-muted">Our templates are updated regularly so they don't break.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane text-primary"></i>
-                        <h3>Ready to Ship</h3>
-                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o text-primary"></i>
-                        <h3>Up to Date</h3>
-                        <p class="text-muted">We update dependencies to keep things fresh.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
                         <i class="fa fa-4x fa-heart text-primary"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
+                        <h3>Who is Involved?</h3>
+                        <p class="text-muted">The idea was Amy's and now individual christians in Jamaica and the United States are working to make this happen. <a href="who.html">read more</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-usd text-primary"></i>
+                        <h3>How Much?</h3>
+                        <p class="text-muted">The goal is $100,000 USD. Construction can begin once funds raised exceed $70,000 USD.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-institution text-primary"></i>
+                        <h3>Are Donations Tax Deductible?</h3>
+                        <p class="text-muted">Absolutely! </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-clock-o text-primary"></i>
+                        <h3>Timeline?</h3>
+                        <p class="text-muted">Total Construction time will be 3 months. Design is complete. Construction Manager is hired and ready to begin.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-user text-primary"></i>
+                        <h3>The Brethren</h3>
+                        <p class="text-muted">Regular attendance is about 40. Church began meeting in 1992. Maxwell has been preaching for the congregation since 2002.</p>
                     </div>
                 </div>
             </div>
             <br>
             <div class="row">
             
+            <!--
             <ul>
                 <li>How much is this going to cost</li>
                     Goal
@@ -319,7 +344,7 @@
                     Maxwell has been preaching for the congregation since 2002
 
                 <li>Safety</li>
-
+                -->
 
             </ul>
 
@@ -334,15 +359,16 @@
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>Support this great work!</h2>
-                <a href="#" class="btn btn-default btn-xl">Donate</a>
-            </div>
-            <br>
+                <!-- <a href="#" class="btn btn-default btn-xl">Donate</a> -->
+
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
     <input type="hidden" name="cmd" value="_s-xclick">
     <input type="hidden" name="hosted_button_id" value="A862REY7CH3GA">
     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
     <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
     </form>
+            </div>
+
 
         </div>
     </aside>
@@ -353,18 +379,23 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Let's Get In Touch!</h2>
                     <hr class="primary">
-                    <p>Do you still have questions or want to know more? Give us a call or send us an email and we will get back to you as soon as possible!</p>
+                    <p>Do you still have questions or want to know more? Send us an email and we will get back to you as soon as possible!</p>
                 </div>
                 <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x"></i>
+                    <i class="fa fa-envelope-o fa-2x"></i>
 
-                    <p><a href="mailto:your-email@your-domain.com">amy@sanctuaryforthesaints.com</a></p>
+                    <p><a href="mailto:contact@sanctuaryforthesaints.com">general questions</a></p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-2x"></i>
+
+                    <p><a href="mailto:amy@sanctuaryforthesaints.com">amy</a></p>
                 </div>
 
                 <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x"></i>
+                    <i class="fa fa-envelope-o fa-2x"></i>
 
-                    <p><a href="mailto:your-email@your-domain.com">scott@sanctuaryforthesaints.com</a></p>
+                    <p><a href="mailto:scott@sanctuaryforthesaints.com">scott</a></p>
                 </div>
             </div>
         </div>
