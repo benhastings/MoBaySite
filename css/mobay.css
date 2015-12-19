@@ -519,3 +519,8 @@ progress {
 button {
     margin-top: 20px;
 }
+
+.profile {
+    margin-left: auto;
+    margin-right: auto;
+}
