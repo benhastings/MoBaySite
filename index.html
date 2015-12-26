@@ -249,17 +249,23 @@
     ------------------------------>
     <section  id="updates">
     <div class="scroll-to container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Recent Updates</h2>
-                    <hr class="primary">
-                </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Recent Updates</h2>
+                <hr class="primary">
             </div>
         </div>
-        Most recent updates from Wordpress - 3-4 with link to the "more"
+        <div class="row">
+            <div id="feed"></div>
+        </div>
+        <div class="row text-center">
+            <a href="https://montegobaychurch.wordpress.com">Read more updates here</a>.
+        </div>
 
-        <br>
-        "quote" categorized WP posts show up here, too
+    </div>
+
+        
+        
     </section>
 
 
@@ -507,6 +513,54 @@
     <!-- Custom Theme JavaScript -->
     <!--script src="js/creative.js"></script-->
     <script src="js/jamaicaSPA.js"></script>
+
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+    google.load("feeds", "1");
+
+    function initialize() {
+      var feed = new google.feeds.Feed("https://montegobaychurch.wordpress.com/feed/");
+      feed.setNumEntries(4);
+      feed.load(function(result) {
+        if (!result.error) {
+          var container = document.getElementById("feed");
+          for (var i = 0; i < result.feed.entries.length; i++) {
+            var entry = result.feed.entries[i];
+            ////
+            console.log(entry)
+            ////
+            var div = document.createElement("div");
+            div.className='fromWordPress col-lg-3 col-md-3';
+            var title = document.createElement("h4");
+            title.appendChild(document.createTextNode(entry.title));
+            
+            //Create Element for Post Content
+            var post = document.createElement("div");
+            // Grab Post content & subset
+            var c = entry.content;
+            console.log(typeof(c))
+            var cAdd = c.substring(0,c.indexOf('<br>'))
+            console.log(cAdd);
+
+            
+            // post.appendChild(document.createTextNode(cAdd));
+            // post.appendChild(cAdd.firstChild);
+            post.innerHTML=cAdd;
+
+            //div.innerHTML(entry.content);
+            div.appendChild(title);
+            div.appendChild(post);
+            container.appendChild(div);
+          }
+        }
+      });
+    }
+    google.setOnLoadCallback(initialize);
+
+    </script>
+
 
 </body>
 
