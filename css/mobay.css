@@ -192,8 +192,8 @@ header div.overlay {
     left:0;
     right:0;
     bottom:0;
-    background: #444444;
-    opacity: .5;
+    background: rgba(0,0,0,.9);
+    opacity: .8;
 }
 
 header .header-content {
@@ -215,14 +215,15 @@ header .header-content .header-content-inner hr {
 }
 
 header .header-content .header-content-inner p {
-    margin-bottom: 50px;
-    font-size: 16px;
-    font-weight: 300;
+    /*margin-bottom: 50px;*/
+    font-size: 24px;
+    font-weight: 400;
     color: rgba(255,255,255,.7);
 }
-
-header .header-content .header-content-inner h2{
-    margin-top: 450px;
+@media(min-width: 768px){
+    header .header-content .header-content-inner p{
+        margin-top: 400px;
+    }
 }
 
 /*@media(min-width:768px) {*/
