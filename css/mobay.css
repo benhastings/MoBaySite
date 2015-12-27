@@ -176,7 +176,7 @@ header {
     text-align: center;
     color: #fff;
     /*background-color: #333333;*/
-    background-image: url(../img/crowns_head.jpg);
+    background-image: url(../img/crowns_headF.jpg);
 
 
     background-position: center;
@@ -565,3 +565,25 @@ b
 li form input.btn{
     margin-top:5px;
 }
+
+.navbar-left{
+    float: left;
+}
+
+/*.navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 5px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+@media(min-width:768px) {
+  .navbar-brand {
+    float: left;
+    height: 50px;
+    padding: 15px 15px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+}*/
