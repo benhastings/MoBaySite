@@ -470,6 +470,9 @@ ol {
     border-radius: 4px;
   }
 }
+.navbar-header {
+    float: left;
+  }
 @media (min-width: 768px) {
   .navbar-header {
     float: left;
@@ -1315,22 +1318,22 @@ header {
     margin-top: 0;
 }
 
-.service-box {
+.faq-box {
     margin: 50px auto 0;
     max-width: 400px;
 }
 
 @media(min-width:992px) {
-    .service-box {
+    .faq-box {
         margin: 20px auto 0;
     }
 }
 
-.service-box p {
+.faq-box p {
     margin-bottom: 0;
 }
 
-.service-box ol li {
+.faq-box ol li {
     margin-bottom: 0;
     font-size: 16px;
 }

@@ -16,7 +16,8 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/sanctuary.css" type="text/css">
+    <!-- <link rel="stylesheet" href="css/sanctuary.css" type="text/css"> -->
+       <link rel="stylesheet" href="css/sanctuary.min.css" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,22 +34,24 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
+                <div class="navbar-left">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                    <input type="hidden" name="cmd" value="_s-xclick">
+                    <input type="hidden" name="hosted_button_id" value="G75JGVBN76VEE">
+                    <input type="submit" class="btn btn-primary btn-sm navbar-btn page-scroll navbar-left" name="submit" value="Donate" alt="PayPal - The safer, easier way to pay online!">
+                </form>
+                </div>
+
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Sanctuary for the Saints</a>
-
+               <!--  <a class="navbar-brand page-scroll" href="#page-top">Sanctuary for the Saints</a> -->
+              
             </div>
-            <div class="navbar-left">
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="G75JGVBN76VEE">
-                    <input type="submit" class="btn btn-primary btn-sm navbar-btn page-scroll" name="submit" value="Donate" alt="PayPal - The safer, easier way to pay online!">
-                </form>
-            </div>
+          
 
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -100,7 +103,7 @@
                 <div class="center-block">
                 <h3>$1,200 of $95,000 raised</h3>
                 </div>
-
+                <h3 class="text-primary">Listen to a message from Amy!</h3>
                 <audio controls style="width:250px;">
                     <source src="welcome_audio.mp3" type="audio/mpeg">
                     Your browser does not support the audio element.
@@ -358,8 +361,8 @@
             </div>
         </div>
         <div class="container">
-            <div class="service-box">
-                <p class="text-center"><i class="fa fa-4x fa-usd text-primary"></i></p>
+            <div class="faq-box">
+                <p class="text-center"><i class="fa fa-3x fa-bullhorn text-primary"></i></p>
                 <h3 class="text-center">How Do I Help?</h3>
                 
                         
@@ -373,27 +376,28 @@
                     </li>
                 </ol>                            
             </div>
-            <div class="service-box text-center">
+            <div class="faq-box text-center">
                 
-                    <i class="fa fa-4x fa-heart text-primary"></i>
+                    <i class="fa fa-3x fa-heart text-primary"></i>
                     <h3>Who is Involved?</h3>
                     <p class="text-muted">Individual Christians in Jamaica and America</p>
                 
             </div>
-            <div class="text-center">
-                <i class="fa fa-4x fa-usd text-primary"></i>
+
+            <div class="faq-box text-center">
+                <i class="fa fa-3x fa-usd text-primary"></i>
                 <h3>How Much?</h3>
                 <p class="text-muted">The goal is $95,000 USD.  Every donation is helpful! Construction can begin once funds raised exceed $70,000 USD.</p>
             </div>
             <!-- <div class="col-lg-2 col-md-2 text-center"> -->
-            <div class="text-center">
-                <i class="fa fa-4x fa-institution text-primary"></i>
+            <div class="faq-box text-center">
+                <i class="fa fa-3x fa-institution text-primary"></i>
                 <h3>Are Donations Tax Deductible?</h3>
-                <p class="text-muted">Absolutely! </p>
+                <p class="text-muted">Absolutely! All donations $100 or more will receive a donor acknowledgment letter as proof of your donation and right to a tax deduction. However, anyone who gives any amount may email Scott (link below) for a donor acknowledgment letter.</p>
             </div>
             <!-- <div class="col-lg-2 col-md-2 text-center"> -->
-            <div class="text-center"> 
-                <i class="fa fa-4x fa-clock-o text-primary"></i>
+            <div class="faq-box text-center"> 
+                <i class="fa fa-3x fa-clock-o text-primary"></i>
                 <h3>How Long?</h3>
                 <p class="text-muted">
                If all funds were in place today, construction would take about 3 months.</p>
