@@ -12,7 +12,8 @@
     <title>Sanctuary for the Saints</title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+    <!-- <link rel="stylesheet" href="css/bootstrap.css" type="text/css"> -->
+   <!--  <link rel="stylesheet" href="css/bootstrap-crush.css" type="text/css"> -->
 
     <!-- Custom Fonts -->
     <link href="https://www.google.com/fonts#UsePlace:use/Collection:Lato:400,700,900" rel='stylesheet' type='text/css'>
@@ -20,7 +21,7 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/mobay.css" type="text/css">
+    <link rel="stylesheet" href="css/mobay-all.css" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -153,7 +154,8 @@
 <section class="no-padding">
         <div class="scroll-to container-fluid">
             <div class="row no-gutter no-padding">
-                <div class="col-lg-4 col-sm-6">
+                 <div class="col-lg-6 col-sm-6 pull-left">
+                <!-- <div class="pull-left"> -->
                     <div class="portfolio-box">
                         <img src="img/singing_sm.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -168,7 +170,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                 <div class="col-lg-6 col-sm-6 pull-left">
+                <!-- <div class="pull-left"> -->
                     <div class="portfolio-box">
                         <img src="img/study_sm.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -183,7 +186,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+                 <div class="col-lg-6 col-sm-6 pull-left">
+                <!-- <div class="pull-left"> -->
                     <div class="portfolio-box">
                         <img src="img/girls_sm.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -198,7 +202,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+               <!--  <div class="col-lg-4 col-sm-6">
                     <div class="portfolio-box">
                         <img src="img/sign_sm.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -212,8 +216,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
+                </div> -->
+              <div class="col-lg-6 col-sm-6 pull-left">
+                <!-- <div class="pull-left"> -->
                     <div class="portfolio-box">
                         <img src="img/outdoor_sm.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -228,7 +233,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6">
+               <div class="col-lg-6 col-sm-6 pull-left">
+                <!-- <div class="pull-left"> -->
                     <div class="portfolio-box">
                         <img src="img/brethren_sm.jpg" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
@@ -452,21 +458,26 @@
     <!--script src="js/jquery.js"></script-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <!--script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script-->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/helium-css/1.1/helium.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.fittext.js"></script>
+    <script type="text/javascript">
+        window.addEventListener('load', function(){
 
-    <!-- Custom Theme JavaScript -->
-    <!--script src="js/creative.js"></script-->
-    <script src="js/jamaicaSPA.js"></script>
+            helium.init();
+
+        }, false);
+    </script>
+
+    <script src="js/sanctuary.min.js"></script>
 
 
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
 
+    //========================================================
+    //  Script to grab RSS from Wordpress, parse, and add to appropriate section
+    //========================================================
     google.load("feeds", "1");
 
     function initialize() {
@@ -478,7 +489,7 @@
           for (var i = 0; i < result.feed.entries.length; i++) {
             var entry = result.feed.entries[i];
             ////
-            console.log(entry)
+            //console.log(entry)
             ////
             var div = document.createElement("div");
             div.className='fromWordPress col-lg-3 col-md-3';
@@ -490,9 +501,8 @@
             var post = document.createElement("div");
             // Grab Post content & subset
             var c = entry.content;
-            console.log(typeof(c))
             var cAdd = c.substring(0,c.indexOf('<br>'))
-            console.log(cAdd);
+            
 
             
             // post.appendChild(document.createTextNode(cAdd));
