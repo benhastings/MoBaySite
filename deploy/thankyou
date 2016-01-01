@@ -1,0 +1,22 @@
+<html>
+<head>
+<!-- Custom Fonts -->
+    <link href="https://www.google.com/fonts#UsePlace:use/Collection:Lato:400,700,900" rel='stylesheet' type='text/css'>
+    <!--link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="sanctuary.min.css" type="text/css">
+</head>
+<body>
+<h1>THANK YOU!</h1>
+<h3>We can't thank you enough for your contribution to this project! However, if you don't mind just one more thing... share this site on facebook, twitter or email your friends, family, or anyone who will listen!</h3>
+
+	<div class="service-box text-center"> 
+        <a href="http://www.facebook.com/sharer.php?u=http://www.sanctuaryforthesaints.org"><i class="fa fa-3x fa-facebook-official text-primary"></i></a>
+                   
+    </div>
+	<div class="service-box text-center"> 
+		<a href="http://twitter.com/share?text=Read, Listen, and Help any way you Can!&url=http://www.sanctuaryforthesaints.org"><i class="fa fa-3x fa-twitter-square text-primary"></i></a>
+</body>
+</html>
