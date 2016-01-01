@@ -94,7 +94,8 @@
             <div class="header-content-inner">
             <h1>Sanctuary for the Saints</h1>
             <br>
-                <div class="progress center-block" style="width: 50%;">
+            	<div id="donationUpdate">
+                <!-- <div class="progress center-block" style="width: 50%;">
                   <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="1436" aria-valuemin="0" aria-valuemax="95000" style="min-width: 3em;width: 2%;">
                     $1.4k
                   </div>
@@ -102,7 +103,8 @@
 
                 <div class="center-block">
                 <h3>$1,436 of $95,000 raised</h3>
-                </div>
+                </div> -->
+                </div><!-- End donationUpdate div -->
                 
                 <h3 class="text-bright">Listen to a message from Amy!</h3>
                 <audio controls style="width:250px;" onclick="clickHandler('audio','click','inline')">
@@ -362,7 +364,8 @@
                         
                 <ol>
                     <li>Pray for us!</li>
-                    <li>Share this website on social media</li>
+                    <li>Share this website on social media  <a href="http://www.facebook.com/sharer.php?u=http://www.sanctuaryforthesaints.org" onclick="clickHandler('share','click','facebook')"><i class="fa fa-2x fa-facebook-official text-primary"></i></a> <a href="http://twitter.com/share?text=Read, Listen, and Help any way you Can!&url=http://www.sanctuaryforthesaints.org" onclick="clickHandler('share','click','twitter')"><i class="fa fa-2x fa-twitter-square text-primary"></i></a>
+                    </li> 
                     <li><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                         <input type="hidden" name="cmd" value="_s-xclick">
                         <input type="hidden" name="hosted_button_id" value="G75JGVBN76VEE">
@@ -480,6 +483,61 @@
 
 
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+<script type="text/javascript">
+    google.load("feeds", "1");
+    function initialize() {
+      var feed = new google.feeds.Feed("https://montegobaychurch.wordpress.com/category/donation-tally/feed/");
+      feed.setNumEntries(1);
+      feed.load(function(result) {
+        if (!result.error) {
+        	entry=result.feed//.entries;
+        	console.log(entry)
+          var container = document.getElementById("donationUpdate");
+//           for (var i = 0; i < result.feed.entries.length; i++) {
+//             var entry = result.feed.entries[i];
+            
+//             var div = document.createElement("div");
+//             div.className='fromWordPress col-lg-3 col-md-3 col-sm-3';
+//             var title = document.createElement("h4");
+//             title.className="text-center"
+//             title.appendChild(document.createTextNode(entry.title));
+            
+//             //Create Element for Post Content
+//             var post = document.createElement("div");
+//             // Grab Post content & subset
+//             var c = entry.content;
+//             var cAdd = c.substring(0,c.indexOf('<br>'))
+            
+//             post.innerHTML=cAdd;
+            
+//             div.appendChild(title);
+//             div.appendChild(post);
+//             container.appendChild(div);
+
+
+// <div class="progress center-block" style="width: 50%;">
+//                   <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="1436" aria-valuemin="0" aria-valuemax="95000" style="min-width: 3em;width: 2%;">
+//                     $1.4k
+//                   </div>
+//                 </div>
+
+//                 <div class="center-block">
+//                 <h3>$1,436 of $95,000 raised</h3>
+//                 </div>
+
+          // }
+        } else {
+        	console.log(result.error)
+        }
+      });
+    }
+    google.setOnLoadCallback(initialize);
+    </script>
+
+    <!--
+    	Feed to pull updates for the "Updates" section
+    	------------------------------------------------>
     <script type="text/javascript">
     google.load("feeds", "1");
     function initialize() {
