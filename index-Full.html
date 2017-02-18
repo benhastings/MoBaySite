@@ -497,10 +497,13 @@
             //Create Element for Post Content
             var post = document.createElement("div");
             // Grab Post content & subset
-            //var c = entry.content                   
-            var c = entry.encoded;
+            var cc = entry.content                   
+            var ce = entry.encoded;
+            console.log('cc first, ce second')
+            console.log(cc)
+            console.log(ce)
             //var cAdd = c.substring(0,c.indexOf('<br>'))
-            var cAdd = c.substring(0,c.indexOf('<br>'))+'...'
+            var cAdd = c.substring(0,c.indexOf('!'))+'...'
             console.log(cAdd)
 
             // post.appendChild(document.createTextNode(cAdd));
