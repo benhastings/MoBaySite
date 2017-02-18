@@ -483,32 +483,34 @@
 <script>
     $(document).ready(function() {
     
-    var yql = "select * from rss where url='https://montegobaychurch.wordpress.com/category/donation-tally/feed/'";
-    var container = document.getElementById("feed");
-    $.getJSON(yql, function(res) {
-        console.log(res); 
-        
-        
-            var t = document.getElementById("donationUpdate"),
-                n = res.query.results.item.description;
-            console.log(n);
-            var o = n.substring(n.indexOf("$") + 1, n.indexOf("."));
-            console.log("newTotal:" + o);
-            var a = Math.round(o / 1e3 * 10) / 10,
-                c = Math.round(o / 95e3 * 100);
-            console.log("newPct:" + c);
-            var d = document.createElement("div");
-            d.className = "progress-bar progress-bar-success", d.setAttribute("style", "min-width: 3em;width: " + c + "%;"), d.setAttribute("role", "progressbar"), d.setAttribute("aria-valuenow", o), d.setAttribute("aria-valuemin", "0"), d.setAttribute("aria-valuemax", "95000"), d.innerHTML = "$" + a + "k", console.log(d);
-            var i = (o / 1).toFixed(1).replace(/(\d)(?=(\d{3})+\.)/g, "$1,"),
-                l = "$" + i.substr(0, i.indexOf(".")),
-                r = document.createElement("div");
-            r.className = "center-block", r.innerHTML = "<h3>" + l + " of $95,000 raised</h3>", console.log(r);
-            var s = document.createElement("div");
-            s.className = "progress center-block", s.setAttribute("style", "width:50%;")
-            s.appendChild(d)
-            t.appendChild(s)
-            t.appendChild(r)
-        
+    var yqlTotal = "select * from rss where url='https://montegobaychurch.wordpress.com/category/donation-tally/feed/'";
+   $.getJSON(yql, function(res) {
+        console.log(res);
+        t = document.getElementById("donationUpdate");
+        n = res.query.results.item.description;
+        console.log(n);
+        var o = n.substring(n.indexOf("$") + 1, n.indexOf("."));
+        console.log("newTotal:" + o);
+        a = Math.round(o / 1e3 * 10) / 10;
+        c = Math.round(o / 95e3 * 100);
+        console.log("newPct:" + c);
+
+        var d = document.createElement("div");
+        d.className = "progress-bar progress-bar-success", d.setAttribute("style", "min-width: 3em;width: " + c + "%;"), d.setAttribute("role", "progressbar"), d.setAttribute("aria-valuenow", o), d.setAttribute("aria-valuemin", "0"), d.setAttribute("aria-valuemax", "95000"), d.innerHTML = "$" + a + "k", console.log(d);
+
+        i = (o / 1).toFixed(1).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
+        l = "$" + i.substr(0, i.indexOf("."));
+
+        r = document.createElement("div");
+        r.className = "center-block", r.innerHTML = "<h3>" + l + " of $95,000 raised</h3>", console.log(r);
+
+        var s = document.createElement("div");
+        s.className = "progress center-block", s.setAttribute("style", "width:50%;")
+
+        s.appendChild(d)
+        t.appendChild(s)
+        t.appendChild(r)
+
     },"jsonp");
 //https://montegobaychurch.wordpress.com/category/donation-tally/feed/
 
