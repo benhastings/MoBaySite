@@ -486,7 +486,29 @@
         console.log(res); 
         entries=res.query.results.item
         console.log(entries)
-        
+        for(var i=0;i<4;i++){
+            entry=entries[i]
+            var div = document.createElement("div");
+            div.className='fromWordPress col-lg-3 col-md-3 col-sm-3';
+            var title = document.createElement("h4");
+            title.className="text-center"
+            title.appendChild(document.createTextNode(entry.title));
+
+            //Create Element for Post Content
+            var post = document.createElement("div");
+            // Grab Post content & subset
+            //var c = entry.content                   
+            var c = entry.encoded;
+            var cAdd = c.substring(0,c.indexOf('<br>'))
+
+            // post.appendChild(document.createTextNode(cAdd));
+            // post.appendChild(cAdd.firstChild);
+            post.innerHTML=cAdd;
+            //div.innerHTML(entry.content);
+            div.appendChild(title);
+            div.appendChild(post);
+            container.appendChild(div);
+        }    
         
     }, "jsonp");
     
