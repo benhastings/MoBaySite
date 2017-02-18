@@ -478,7 +478,7 @@
    $.getJSON(yqlTotal, function(res) {
         console.log(res);
         t = document.getElementById("donationUpdate");
-        n = res.query.results.item.description;
+        n = res.query.results.item[0].description;
         console.log(n);
         var o = n.substring(n.indexOf("$") + 1, n.indexOf("."));
         console.log("newTotal:" + o);
