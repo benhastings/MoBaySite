@@ -499,7 +499,9 @@
             // Grab Post content & subset
             //var c = entry.content                   
             var c = entry.encoded;
-            var cAdd = c.substring(0,c.indexOf('<br>'))
+            //var cAdd = c.substring(0,c.indexOf('<br>'))
+            var cAdd = c.substring(0,c.indexOf('<br>'))+'...'
+            console.log(cAdd)
 
             // post.appendChild(document.createTextNode(cAdd));
             // post.appendChild(cAdd.firstChild);
